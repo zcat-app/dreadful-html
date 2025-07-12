@@ -1,0 +1,71 @@
+<html>
+<head>
+    <title>Click Popup</title>
+    <link rel="stylesheet" href="../code.css">
+</head>
+
+
+<body>
+<h2> Click Popup</h2>
+<h3>Example:</h3>
+
+<div class="click-wrapper">
+    <label class="button">
+        <input type="checkbox" class="trigger" /> 
+        CLICK ON ME
+    </label>
+    <div class="content">
+        POP-UP CONTENT
+    </div>
+</div>
+<style>
+    .click-wrapper {
+        position: relative;
+    }
+    .click-wrapper > .content {
+        display: none;
+    }
+    .click-wrapper > .button > .trigger {
+        display: none;
+    }
+    .click-wrapper > .button:has(.trigger:checked) ~ .content {
+        display: block;
+    }
+</style>
+
+
+<div style="margin-top: 5em;">
+<h3>Code:</h3>
+<pre class="html">
+<b>&lt;div</b> <span class="css">class="click-wrapper"</span><b>&gt;</b>
+    <b>&lt;label</b> <span class="css">class="button"</span><b>&gt;</b>
+        <b>&lt;input</b> type="checkbox" <span class="css">class="trigger"</span><b>/&gt;</b>
+        CLICK ON ME
+    <b>&lt;/label&gt;</b>
+    <b>&lt;div</b> <span class="css">class="content"</span><b>&gt;</b>
+        POP-UP CONTENT
+    <b>&lt;/div&gt;</b>
+<b>&lt;/div&gt;</b>
+</pre>
+
+<pre class="css">
+<b>&lt;style&gt;</b>
+    <span class="rule">.click-wrapper {</span>
+        position: relative;
+    <span class="rule">}</span>
+    <span class="rule">.click-wrapper > .content {</span>
+        display: none;
+    <span class="rule">}</span>
+    <span class="rule">.click-wrapper > .button > .trigger {</span>
+        display: none;
+    <span class="rule">}</span>
+    <span class="rule">.click-wrapper > .button:has(.trigger:checked) ~ .content {</span>
+        display: block;
+    <span class="rule">}</span>
+<b>&lt;/style&gt;</b>
+</pre>
+</div>
+
+</body>
+
+</html>

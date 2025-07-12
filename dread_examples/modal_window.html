@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Modal Window</title>
+    <link rel="stylesheet" href="../code.css">
+</head>
+
+
+<body>
+<h2> Modal Window</h2>
+<h3>Example:</h3>
+<a href="#modal">CLICK ME!</a>
+
+<div id="modal" class="overlay">
+    <a class="cancel" href="#"></a>
+    <div class = "modal">
+        <a class="close" href="#">✕</a>
+        <div class="content">CONTENT</div>
+    </div>
+</div>
+
+<style>
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.5);
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 250ms;
+        .cancel {
+            position: absolute;
+            width: 100 vw;
+            height: 100 wh;
+            cursor: default;
+        }
+        &:target {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    .modal {
+        margin: 100px auto; /*any margin*/
+        height: 200px; /*any height you want, remove to adjust to content height*/
+        width: 300px; /*any width you want*/
+        background: #fff;
+        border: 1px solid gray;
+        position: relative;
+        .close {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 0;
+            right: 0;
+            font-size: 24px;
+        }
+        .content {
+            overflow: auto;
+        }
+    }
+</style>
+
+
+<div style="margin-top: 5em;">
+<h3>Code:</h3>
+
+<pre class="html">
+<b>&lt;a</b> href="#modal"<b>&gt;</b>CLICK ME!<b>&lt;/a&gt;</b>
+
+<b>&lt;div</b> id="modal" <span class="css">class="overlay"</span><b>&gt;</b>
+    <b>&lt;a</b> <span class="css">class="cancel"</span> href="#"<b>&gt;&lt;/a&gt;</b>
+    <b>&lt;div</b> <span class="css">class = "modal"</span><b>&gt;</b>
+        <b>&lt;a</b> <span class="css">class="close"</span> href="#"<b>&gt;</b>✕<b>&lt;/a&gt;</b>
+        <b>&lt;div</b> <span class="css">class="content"</span><b>&gt;</b>CONTENT<b>&lt;/div&gt;</b>
+    <b>&lt;/div&gt;</b>
+<b>&lt;/div&gt;</b>
+</pre>
+
+<pre class="css">
+<b>&lt;style&gt;</b>
+    <span class="rule">.overlay {</span>
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.5);
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 250ms;
+        <span class="rule">.cancel {</span>
+            position: absolute;
+            width: 100 vw;
+            height: 100 wh;
+            cursor: default;
+        <span class="rule">}</span>
+        <span class="rule">&:target {</span>
+            visibility: visible;
+            opacity: 1;
+        <span class="rule">}</span>
+    <span class="rule">}</span>
+    <span class="rule">.modal {</span>
+        margin: 100px auto; <span class="comment">/*any margin*/</span>
+        height: 200px; <span class="comment">/*any height you want, remove to adjust to content height*/</span>
+        width: 300px; <span class="comment">/*any width you want*/</span>
+        background: #fff;
+        border: 1px solid gray;
+        position: relative;
+        <span class="rule">.close {</span>
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 0;
+            right: 0;
+            font-size: 24px;
+        <span class="rule">}</span>
+        <span class="rule">.content {</span>
+            overflow: auto;
+        <span class="rule">}</span>
+    <span class="rule">}</span>
+<b>&lt;/style&gt;</b>
+</pre>
+</div>
+
+</body>
+
+</html>

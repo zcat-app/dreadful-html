@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tabs Layout</title>
+    <link rel="stylesheet" href="../code.css">
+</head>
+
+
+<body>
+<h2>Tabs Layout</h2>
+<h3>Example:</h3>
+<div class="tabs">
+    <div class="tab">
+        <input value="a" name="tabs" type="radio" id="tab-a" />
+        <label class="header" for="tab-a">Header A<br/>(click me)</label>
+        <div class="content">Content A</div>
+    </div>
+
+    <div class="tab">
+        <input value="b" name="tabs" type="radio" id="tab-b" />
+        <label class="header" for="tab-b">Header B<br/>(click me)</label>
+        <div class="content">Content B</div>
+    </div>
+</div>
+<style>
+    .tabs {
+        flex-wrap: wrap;
+        display: flex;
+    }
+    .tab {
+        display: contents;
+    }
+    .tab input {
+        display: none;
+    }
+    .header {
+        order: -1;
+        padding: 0.75em;
+    }
+    input:checked ~ .header {
+        background: lightgray
+    }
+    .content {
+        width: 100%;
+        order: 1;
+    }
+    input:not(:checked) ~ .content {
+        display: none;
+    }
+</style>
+
+
+<div style="margin-top: 5em;">
+<h3>Code:</h3>
+
+<pre class="html">
+<b>&lt;div</b> <span class="css">class="tabs"</span><b>&gt;</b>
+    <b>&lt;div</b> <span class="css">class="tab"</span><b>&gt;</b>
+        <b>&lt;input</b> value="a" name="tabs" type="radio" id="tab-a"<b>/&gt;</b>
+        <b>&lt;label</b> <span class="css">class="header"</span> for="tab-a"<b>&gt;</b>Header A<b>&lt;/label&gt;</b>
+        <b>&lt;div</b> <span class="css">class="content"</span>&gt;</b>Content A<b>&lt;/div&gt;</b>
+    <b>&lt;/div&gt;</b>
+
+    <b>&lt;div</b> <span class="css">class="tab"</span><b>&gt;</b>
+        <b>&lt;input</b> value="b" name="tabs" type="radio" id="tab-b"<b>/&gt;</b>
+        <b>&lt;label</b> <span class="css">class="header"</span> for="tab-b"<b>&gt;</b>Header B<b>&lt;/label&gt;</b>
+        <b>&lt;div</b> <span class="css">class="content"</span><b>&gt;</b>Content B<b>&lt;/div&gt;</b>
+    <b>&lt;/div&gt;</b>
+<b>&lt;/div&gt;</b>
+</pre>
+
+<pre class="css">
+<b>&lt;style&gt;</b>
+    <span class="rule">.tabs {</span>
+        flex-wrap: wrap;
+        display: flex;
+    <span class="rule">}</span>
+    <span class="rule">.tab {</span>
+        display: contents;
+    <span class="rule">}</span>
+    <span class="rule">.tab input {</span>
+        display: none;
+    <span class="rule">}</span>
+    <span class="rule">.header {</span>
+        order: -1;
+        padding: 0.75em;
+    <span class="rule">}</span>
+    <span class="rule">input:checked ~ .header {</span>
+        background: lightgray
+    <span class="rule">}</span>
+    <span class="rule">.content {</span>
+        width: 100%;
+        order: 1;
+    <span class="rule">}</span>
+    <span class="rule">input:not(:checked) ~ .content {</span>
+        display: none;
+    <span class="rule">}</span>
+<b>&lt;/style&gt;</b>    
+</pre>
+</div>
+
+</body>
+
+</html>

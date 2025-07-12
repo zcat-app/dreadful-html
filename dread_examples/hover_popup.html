@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hover Popup</title>
+    <link rel="stylesheet" href="../code.css">
+</head>
+
+
+<body>
+<h2> Hover Popup</h2>
+<h3>Example:</h3>
+<div class = "hover-wrapper">
+    <div class = "button">
+        HOVER OVER ME!
+    </div>
+    <div class = "content">
+        POP-UP CONTENT
+    </div>
+</div>
+<style>
+    .hover-wrapper {
+        position: relative;
+        display: block;
+        float: left;
+    }
+    .hover-wrapper > .button {
+        display: block;
+    }
+    .hover-wrapper > .content {
+        display: none;
+        width: 200px;
+    }
+    .hover-wrapper > .content:hover {
+        position: absolute;
+        display: block;
+    }
+    .hover-wrapper > .button:hover ~ .content{
+        position: absolute;
+        display: block;
+    }
+</style>
+
+
+<div style="margin-top: 5em;">
+<h3>Code:</h3>
+
+<pre class="html">
+<b>&lt;div</b> <span class="css">class="hover-wrapper"</span><b>&gt;</b>
+    <b>&lt;div</b> <span class="css">class="button"</span><b>&gt;</b>
+        <span>HOVER OVER ME!</span>
+    <b>&lt;/div&gt;</b>
+    <b>&lt;div</b> <span class="css">class="content"</span><b>&gt;</b>
+        <span>POP-UP CONTENT</span>
+    <b>&lt;/div&gt;</b>
+<b>&lt;/div&gt;</b>
+</pre>
+
+<pre class="css">
+<b>&lt;style&gt;</b>
+    <span class="rule">.hover-wrapper {</span>
+        position: relative;
+        display: block;
+        float: left;
+    <span class="rule">}</span>
+    <span class="rule">.hover-wrapper > .button {</span>
+        display: block;
+    <span class="rule">}</span>
+    <span class="rule">.hover-wrapper > .content {</span>
+        display: none;
+        width: 200px;
+    <span class="rule">}</span>
+    <span class="rule">.hover-wrapper > .content:hover {</span>
+        position: absolute;
+        display: block;
+    <span class="rule">}</span>
+    <span class="rule">.hover-wrapper > .button:hover ~ .content{</span>
+        position: absolute;
+        display: block;
+    <span class="rule">}</span>
+<b>&lt;/style&gt;</b>
+</pre>
+</div>
+
+</body>
+
+</html>

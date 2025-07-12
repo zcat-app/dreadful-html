@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Validation</title>
+    <link rel="stylesheet" href="../code.css">
+</head>
+
+
+<body>
+<h2>Input Validation</h2>
+<h3>Example:</h3>
+
+<form>
+    <input 
+      placeholder="username" 
+      pattern="[a-zA-Z0-9]+"
+      minLength="2"
+      maxLength="32"
+      required /> 
+
+    <div class="error-message">
+        Error: Username must be between 2-32 characters and must contain only alphanumeric values!
+    </div>
+</form>
+
+<style>
+    input:user-invalid {
+        border: 1px solid red;
+    }
+    input:user-invalid ~ .error-message {
+        display: block;
+    }
+    .error-message {
+        display: none;
+        color: red;
+    }
+</style>
+
+
+<div style="margin-top: 5em;">
+<h3>Code:</h3>
+
+<pre class="html">
+<b>&lt;form&gt;</b>
+    <b>&lt;input</b> 
+      placeholder="username" 
+      pattern="[a-zA-Z0-9]+"
+      minLength="2"
+      maxLength="32"
+      required <b>/&gt;</b> 
+
+    <b>&lt;div</b> <span class="css">class="error-message"</span><b>&gt;</b>
+        Error: Username must be between 2-32 characters and must contain only alphanumeric values!
+    <b>&lt;/div&gt;</b>
+<b>&lt;/form&gt;</b>
+</pre>
+
+<pre class="css">
+<b>&lt;style&gt;</b>
+    <span class="rule">input:user-invalid {</span>
+        border: 1px solid red;
+    <span class="rule">}</span>
+    <span class="rule">input:user-invalid ~ .error-message {</span>
+        display: block;
+    <span class="rule">}</span>
+    <span class="rule">.error-message {</span>
+        display: none;
+        color: red;
+    <span class="rule">}</span>
+    <span class="rule">.hover-wrapper > .button:hover ~ .content{</span>
+        position: absolute;
+        display: block;
+    <span class="rule">}</span>
+<b>&lt;/style&gt;</b>
+</pre>
+</div>
+
+</body>
+
+</html>

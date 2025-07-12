@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Detector</title>
+    <link rel="stylesheet" href="../code.css">
+</head>
+
+
+<body>
+<h2>JavaScript Detector</h2>
+<h3>Example:</h3>
+<div jsdone>
+    🔴JavaScript is disabled
+</div>
+<div jsalert>
+    ⚠️ 🟢 JavaScript is enabled ⚠️
+</div>
+
+<noscript>
+    <style>
+        [jsalert] {
+            display:none !important 
+        }
+        [jsdone] {
+            display: block !important;
+        }
+    </style>
+</noscript>  
+<style>
+    [jsalert] {
+        display: block;
+    }
+    [jsdone] {
+        display: none;
+    }
+</style>
+
+
+<div style="margin-top: 5em;">
+<h3>Code:</h3>
+
+<pre class="html">
+<b>&lt;div</b> <span class="css">jsdone</span><b>&gt;</b>
+    🔴 JavaScript is disabled
+<b>&lt;/div&gt;</b>
+<b>&lt;div</b> <span class="css">jsalert</span><b>&gt;</b>
+    ⚠️ 🟢 JavaScript is enabled ⚠️
+<b>&lt;/div&gt;</b>
+</pre>
+
+<pre class="css">
+<b>&lt;noscript&gt;</b>
+    <b>&lt;style&gt;</b>
+        <span class="rule">[jsalert] {</span>
+            display:none !important 
+        <span class="rule">}</span>
+        <span class="rule">[jsdone] {</span>
+            display: block !important;
+        <span class="rule">}</span>
+    <b>&lt;/style&gt;</b>
+<b>&lt;/noscript&gt;</b>  
+<b>&lt;style&gt;</b>
+    <span class="rule">[jsalert] {</span>
+        display: block;
+    <span class="rule">}</span>
+    <span class="rule">[jsdone] {</span>
+        display: none;
+    <span class="rule">}</span>
+<b>&lt;/style&gt;</b>
+
+</pre>
+</div>
+
+</body>
+
+</html>
